@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Prototipo_App_Financeiro.Views;
 
 namespace Prototipo_App_Financeiro
 {
@@ -11,7 +12,7 @@ namespace Prototipo_App_Financeiro
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            return new Window(new TransactionList());
         }
     }
 }
