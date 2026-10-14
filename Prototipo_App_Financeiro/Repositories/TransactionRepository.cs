@@ -11,11 +11,10 @@ namespace Prototipo_App_Financeiro.Repositories
     public class TransactionRepository : ITransactionRepository
     {
         private readonly LiteDatabase db;
-        private readonly string collectionName;
-        public TransactionRepository()
+        private readonly string collectionName="transactions";
+        public TransactionRepository(LiteDatabase database)
         {
-            db = new LiteDatabase("Filename=C:/users/AppData/database.db;Connection=Shared");
-            db.Dispose();
+            db = database;
         }
 
         public List<Transaction> GetAll()
