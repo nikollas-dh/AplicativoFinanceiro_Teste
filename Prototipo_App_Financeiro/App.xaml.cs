@@ -12,7 +12,7 @@ namespace Prototipo_App_Financeiro
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new TransactionList());
+            return new Window(new NavigationPage(new TransactionList()));
         }
     }
 }

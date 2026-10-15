@@ -3,10 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Prototipo_App_Financeiro.Views.TransactionEdit"
              Title="TransactionEdit">
-    <VerticalStackLayout>
-        <Label 
-            Text="Transaction Edit"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Spacing="40">
+        <Border BackgroundColor="Black" Padding="15" Stroke="Transparent" StrokeShape="RoundRectangle 30" Margin="15">
+            <Grid ColumnDefinitions="*,30" RowDefinitions="Auto">
+                <Label 
+                Text=" Editar Transação"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                TextColor="White"/>
+                <Label 
+                Text="X" 
+                HorizontalOptions="Center" 
+                Grid.Row="0"
+                Grid.Column="1"
+                 TextColor="White"/>
+            </Grid>
+        </Border>
+
+        <Grid ColumnDefinitions="*,*"  WidthRequest="300">
+            <RadioButton IsChecked="True" Content="Receita" Margin="0"/>
+            <RadioButton Content="Despesa" Grid.Column="1" HorizontalOptions="End"/>
+        </Grid>
+
+        <VerticalStackLayout  Margin="40,0" Spacing="20">
+            <Entry Placeholder="Nome"/>
+            <DatePicker/>
+            <Entry Placeholder="Valor"/>
+        </VerticalStackLayout>
+
+        <Button 
+        CornerRadius="25" 
+        Text="Salvar" 
+        HorizontalOptions="Center" 
+        WidthRequest="300" 
+        Margin="0,70"/>
     </VerticalStackLayout>
 </ContentPage>
